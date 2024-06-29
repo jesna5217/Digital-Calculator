@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULATOR</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+       <div class="calculator">
+     <div class="display">
+        <input type="text" name="display" id="input">
+        </div>
+        <div>
+            <button type="button" onclick="input.value='' ">AC</button>
+            <button type="button" onclick="input.value=input.value.toString().slice(0,-1)">DE</button>
+            <!-- (0,-1) returns the first to second last element -->
+            <button type="button"  onclick="append('.')">.</button>
+            <button type="button"  onclick="append('/')">/</button>
+            
+</div>
+<div>
+            <button type="button" onclick="append('7')">7</button>
+            <!-- <button type="button" onclick="input.value+='7' ">7</button>,then no need of the function -->
+
+            <button type="button" onclick="append('8')">8</button>
+            <button type="button" onclick="append('9')">9</button>
+            <button type="button"  onclick="append('*')">*</button>
+</div>
+
+
+<div>
+    <button type="button" onclick="append('4')">4</button>
+    <button type="button" onclick="append('5')">5</button>
+    <button type="button" onclick="append('6')">6</button>
+    <button type="button"  onclick="append('-')">-</button>
+</div>
+
+<div>
+    <button type="button" onclick="append('1')">1</button>
+    <button type="button" onclick="append('2')">2</button>
+    <button type="button" onclick="append('3')">3</button>
+    <button type="button" onclick="append('+')">+</button>
+</div>
+
+<div>
+    <button type="button" onclick="append('00')">00</button>
+    <button type="button" onclick="append('0')">0</button>
+    <button type="button" id="equal" onclick="calculate('=')">=</button>
+   
+</div>
+
+       </div>
+     
+    </div>
+</body>
+<script>
+    function append(x){
+        input.value=input.value+x
+
+    }
+    function calculate(equal){
+        var result=input.value;
+        input.value=eval(result);
+
+    }
+    </script>
+</html>
