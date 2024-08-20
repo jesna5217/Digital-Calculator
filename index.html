@@ -8,6 +8,7 @@
 </head>
 <body>
     <div class="container">
+        <div class="head"><h1>CALCULATOR</h1></div>
        <div class="calculator">
      <div class="display">
         <input type="text" name="display" id="input">
@@ -15,6 +16,7 @@
         <div>
             <button type="button" onclick="input.value='' ">AC</button>
             <button type="button" onclick="input.value=input.value.toString().slice(0,-1)">DE</button>
+            <!-- -1 is the last element so it extracts all the values upto the second last -->
             <!-- (0,-1) returns the first to second last element -->
             <button type="button"  onclick="append('.')">.</button>
             <button type="button"  onclick="append('/')">/</button>
