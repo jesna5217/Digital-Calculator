@@ -80,6 +80,9 @@ margin-top: 10px;}
     #equal{
         width: 97px;
     }
+    .buttons{
+        text-align: center;
+    }
    
 }
 @media (min-width: 768px) and (max-width:991px){
